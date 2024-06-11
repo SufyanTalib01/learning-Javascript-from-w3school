@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- JS HOME  -->
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date();">click me to show today's date</button>
+    <p id="demo"></p>
+
+    <!-- JS INTRODUCTION  -->
+    <button onclick="document.getElementById('image').src='pic_bulbon.gif'">Turn On Bulb</button>
+    <img id="image" src="pic_bulboff.gif" alt="">
+    <button onclick="document.getElementById('image').src='pic_bulboff.gif'">Turn Off Bulb</button>
+
+    <!-- WHERE TO  -->
+     <p id="for-change">Click for change</p>
+     <button onclick="ClickMe()">click me</button>
+
+     <script>
+        function ClickMe(){
+            document.getElementById('for-change').innerHTML = 'Wow its Change';
+        }        
+     </script>
+
+     <!-- JS OUTPUT  -->
+      <p id="demo1"></p>
+      <script>
+        document.getElementById('demo1').innerHTML = 12+8;
+      </script>
+
+      <span id="span">How was Window Alert Box?</span>
+      <script>
+        // window.alert(12+22);
+      </script>
+
+      <button onclick="Print()">Click for Print</button>
+      <script>
+        function Print(){
+            window.print();
+        }
+      </script>
+
+      <!-- JS STATEMENT  -->
+       <br>
+       <button  onclick="Btn2()">Click me Bro</button>
+       <p id="demo3"></p>
+       <p id="demo4"></p>
+       <script>
+        function Btn2(){
+            document.getElementById('demo3').innerHTML = 'Hello Bro';
+            document.getElementById('demo4').innerHTML = "How Are YOU";
+        }
+       </script>
+
+       <!-- jS SYNTAX -->
+        <p id="demo5"></p>
+        <script>
+            document.getElementById('demo5').innerHTML = 40*3;
+        </script>
+        <p id="demo6"></p>
+        <script>
+            let x;
+            x = 11;
+            document.querySelector('#demo6').innerHTML = x * 5;
+        </script>
+
+        <p class="demo7"></p>
+        <script>
+            let Price1 = 40;
+            let Price2 = 90;
+            let Total = Price1 + Price2
+            document.querySelector('.demo7').innerHTML = "The Total Value of Price1 and Price2 is " + Total;
+        </script>
+
+        <!-- JS VARIABLES  -->
+         <script>
+            // let carName;
+            // var carName;
+            // carName = 'Volvo';
+            // console.log(typeof.carName);
+         </script>
+
+         <p id="demo8"></p>
+         <p id="demo9"></p>
+         <script>
+            let a = 5 + 10 + 30;
+            document.getElementById('demo8').innerHTML = "The Value Of a is " + a;
+
+            let b = 5 + 10 + "30";
+            document.getElementById('demo9').innerHTML = b;
+
+
+            document.querySelector{$("p")}.innerHTML = "Everyone is Changed"
+         </script>
+</body>
+</html>
