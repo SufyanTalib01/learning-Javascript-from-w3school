@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<style>
+    body{
+        height: 300vh;
+    }
+</style>
 <body>
 
     <!-- JS HOME  -->
@@ -26,6 +32,8 @@
         }        
      </script>
 
+     <hr>
+
      <!-- JS OUTPUT  -->
       <p id="demo1"></p>
       <script>
@@ -44,6 +52,8 @@
         }
       </script>
 
+      <hr>
+
       <!-- JS STATEMENT  -->
        <br>
        <button  onclick="Btn2()">Click me Bro</button>
@@ -56,6 +66,7 @@
         }
        </script>
 
+        <hr>
        <!-- jS SYNTAX -->
         <p id="demo5"></p>
         <script>
@@ -75,7 +86,7 @@
             let Total = Price1 + Price2
             document.querySelector('.demo7').innerHTML = "The Total Value of Price1 and Price2 is " + Total;
         </script>
-
+    <hr>
         <!-- JS VARIABLES  -->
          <script>
             // let carName;
@@ -92,9 +103,108 @@
 
             let b = 5 + 10 + "30";
             document.getElementById('demo9').innerHTML = b;
-
-
-            document.querySelector{$("p")}.innerHTML = "Everyone is Changed"
+            // document.querySelector{$("p")}.innerHTML = "Everyone is Changed"
          </script>
+    <hr>
+         <!-- OPERATORS AND ARITHMETIC -->
+          <script>
+            var c = 10;
+            c *= 2;
+            console.log(c);
+
+            c += 10;
+            console.log(c);
+
+            c ==15;
+            console.log(c);
+
+            var d = 15;
+            d++;
+            console.log(d);
+
+            f = d ** 2;
+            console.log(f);
+          </script>
+
+          <hr>
+
+          <!-- FUNCTIONS  -->
+
+          <p id="demo10"></p>
+          <button id="btn3" onclick="NewButton()">Click me for Calculate</button>
+          <p id="demo11"></p>
+          <p id="demo12"></p>
+
+           <script>
+            var c = NewFunction(10 , 14);
+            document.getElementById('demo10').innerHTML = c;
+
+            function NewFunction(a , b){
+                return a * b ;
+            }
+
+            function NewButton(){
+                document.getElementById('demo11').innerHTML = 4 * 5;
+            }
+          
+            // Convert Celsius to fahrenhiet             
+            function fahrenhiet(tocelsius){
+                return (tocelsius * 9/5) + 32;
+            }
+
+            var value = fahrenhiet(45)
+            document.getElementById('demo12').innerHTML = "Value in Fahrenhiet is " + value;
+           </script>
+
+           <!-- CONVERT KG to GRAM  -->
+            <p id="13"></p>
+            <script>
+                function Gram(KG){
+                    return KG * 1000;
+                }
+            
+            var value = Gram(4);
+            document.getElementById('demo12').innerHTML = "The Value of Gram is " + value;
+            </script>
+
+            <hr>
+
+            <!-- OBJECT  -->
+             <p id="demo13"></p>
+             <p id="demo14"></p>
+             <script>
+                let person = {
+                    name : "Sufyan",
+                    age : 20,
+                    university : "UOS",
+                    city : "Mirpurkhas",
+                }
+                document.getElementById('demo13').innerHTML = "The Name of Person is " + person.name;
+
+                let car = {
+                    model : 2020,
+                    name : "Corolla",
+                    
+                    modelnname : function(){
+                        return this.model + "and" + this.name
+                    }
+                }
+                document.getElementById('demo14').innerHTML = car.modelnname();
+             </script>
+
+             <!-- JS OBJECT PROPERTIES  -->
+              
+             <script>
+                let ProPerson = {
+                    name : "Ali",
+                    school : "Eastern",
+                    city : "MPS",
+                    age : 30,
+                }
+                console.log(ProPerson.country = "Pakistan");
+                console.log(ProPerson.country);
+                delete ProPerson.school;
+                console.log(ProPerson)
+             </script>
 </body>
 </html>
