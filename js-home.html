@@ -204,7 +204,27 @@
                 console.log(ProPerson.country = "Pakistan");
                 console.log(ProPerson.country);
                 delete ProPerson.school;
-                console.log(ProPerson)
+                console.log(ProPerson);
+             </script>
+
+             <p id="demo15"></p>
+             <script>
+                var user = "Sufyan Talib";
+                var greet = "Have a nice day";
+
+                document.getElementById('demo15').innerHTML = `Hello ${user} How are you? OK Bye! ${greet}`;
+             </script>
+
+             <p id="demo16"></p>
+             <script>
+                var number  = 2
+                var txt  = "";
+
+                while (number != Infinity){
+                    number = number * number;
+                    txt = txt + number + "<br>";
+                }
+                document.getElementById('demo16').innerHTML = txt;
              </script>
 </body>
 </html>
