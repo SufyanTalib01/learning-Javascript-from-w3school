@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        height: 300vh;
+    }
+</style>
+
+<body>
+
+    <!-- JS HOME  -->
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date();">click me to show today's
+        date</button>
+    <p id="demo"></p>
+
+    <!-- JS INTRODUCTION  -->
+    <button onclick="document.getElementById('image').src='pic_bulbon.gif'">Turn On Bulb</button>
+    <img id="image" src="pic_bulboff.gif" alt="">
+    <button onclick="document.getElementById('image').src='pic_bulboff.gif'">Turn Off Bulb</button>
+
+    <!-- WHERE TO  -->
+    <p id="for-change">Click for change</p>
+    <button onclick="ClickMe()">click me</button>
+
+    <script>
+        function ClickMe() {
+            document.getElementById('for-change').innerHTML = 'Wow its Change';
+        }        
+    </script>
+
+    <hr>
+
+    <!-- JS OUTPUT  -->
+    <p id="demo1"></p>
+    <script>
+        document.getElementById('demo1').innerHTML = 12 + 8;
+    </script>
+
+    <span id="span">How was Window Alert Box?</span>
+    <script>
+        // window.alert(12+22);
+    </script>
+
+    <button onclick="Print()">Click for Print</button>
+    <script>
+        function Print() {
+            window.print();
+        }
+    </script>
+
+    <hr>
+
+    <!-- JS STATEMENT  -->
+    <br>
+    <button onclick="Btn2()">Click me Bro</button>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        function Btn2() {
+            document.getElementById('demo3').innerHTML = 'Hello Bro';
+            document.getElementById('demo4').innerHTML = "How Are YOU";
+        }
+    </script>
+
+    <hr>
+    <!-- jS SYNTAX -->
+    <p id="demo5"></p>
+    <script>
+        document.getElementById('demo5').innerHTML = 40 * 3;
+    </script>
+    <p id="demo6"></p>
+    <script>
+        let x;
+        x = 11;
+        document.querySelector('#demo6').innerHTML = x * 5;
+    </script>
+
+    <p class="demo7"></p>
+    <script>
+        let Price1 = 40;
+        let Price2 = 90;
+        let Total = Price1 + Price2
+        document.querySelector('.demo7').innerHTML = "The Total Value of Price1 and Price2 is " + Total;
+    </script>
+    <hr>
+    <!-- JS VARIABLES  -->
+    <script>
+        // let carName;
+        // var carName;
+        // carName = 'Volvo';
+        // console.log(typeof.carName);
+    </script>
+
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <script>
+        let a = 5 + 10 + 30;
+        document.getElementById('demo8').innerHTML = "The Value Of a is " + a;
+
+        let b = 5 + 10 + "30";
+        document.getElementById('demo9').innerHTML = b;
+        // document.querySelector{$("p")}.innerHTML = "Everyone is Changed"
+    </script>
+    <hr>
+    <!-- OPERATORS AND ARITHMETIC -->
+    <script>
+        var c = 10;
+        c *= 2;
+        console.log(c);
+
+        c += 10;
+        console.log(c);
+
+        c == 15;
+        console.log(c);
+
+        var d = 15;
+        d++;
+        console.log(d);
+
+        f = d ** 2;
+        console.log(f);
+    </script>
+
+    <hr>
+
+    <!-- FUNCTIONS  -->
+
+    <p id="demo10"></p>
+    <button id="btn3" onclick="NewButton()">Click me for Calculate</button>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+
+    <script>
+        var c = NewFunction(10, 14);
+        document.getElementById('demo10').innerHTML = c;
+
+        function NewFunction(a, b) {
+            return a * b;
+        }
+
+        function NewButton() {
+            document.getElementById('demo11').innerHTML = 4 * 5;
+        }
+
+        // Convert Celsius to fahrenhiet             
+        function fahrenhiet(tocelsius) {
+            return (tocelsius * 9 / 5) + 32;
+        }
+
+        var value = fahrenhiet(45)
+        document.getElementById('demo12').innerHTML = "Value in Fahrenhiet is " + value;
+    </script>
+
+    <!-- CONVERT KG to GRAM  -->
+    <p id="13"></p>
+    <script>
+        function Gram(KG) {
+            return KG * 1000;
+        }
+
+        var value = Gram(4);
+        document.getElementById('demo12').innerHTML = "The Value of Gram is " + value;
+    </script>
+
+    <hr>
+
+    <!-- OBJECT  -->
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <script>
+        let person = {
+            name: "Sufyan",
+            age: 20,
+            university: "UOS",
+            city: "Mirpurkhas",
+        }
+        document.getElementById('demo13').innerHTML = "The Name of Person is " + person.name;
+
+        let car = {
+            model: 2020,
+            name: "Corolla",
+
+            modelnname: function () {
+                return this.model + "and" + this.name
+            }
+        }
+        document.getElementById('demo14').innerHTML = car.modelnname();
+    </script>
+
+    <!-- JS OBJECT PROPERTIES  -->
+
+    <script>
+        let ProPerson = {
+            name: "Ali",
+            school: "Eastern",
+            city: "MPS",
+            age: 30,
+        }
+        console.log(ProPerson.country = "Pakistan");
+        console.log(ProPerson.country);
+        delete ProPerson.school;
+        console.log(ProPerson);
+    </script>
+
+    <p id="demo15"></p>
+    <script>
+        var user = "Sufyan Talib";
+        var greet = "Have a nice day";
+
+        document.getElementById('demo15').innerHTML = `Hello ${user} How are you? OK Bye! ${greet}`;
+    </script>
+
+    <p id="demo16"></p>
+    <script>
+        var number = 2
+        var txt = "";
+
+        while (number != Infinity) {
+            number = number * number;
+            txt = txt + number + "<br>";
+        }
+        document.getElementById('demo16').innerHTML = txt;
+    </script>
+
+    <!-- String  -->
+
+    <p id="demo17"></p>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // document.getElementById("demo17").innerHTML = fruits.toString();
+        console.log(fruits.toString());
+    </script>
+
+    <!-- IS ARRAY -->
+
+    <p id="demo18">
+    </p>
+    <script>
+        var c = ["Sufyan", "talib", "aqib", "AShan"]
+        document.getElementById("demo18").innerHTML = c;
+        var c = 20;
+        b = Array.isArray(c);
+        document.write(b + "<br>");
+    </script>
+
+    <!-- For Each LOOP  -->
+    <script>
+        var c = ["Hello", "Bro", "How", "Are", "You"];
+        c.forEach(function (value) {
+            document.write(value + "<br>");
+        })
+    </script>
+
+    <!-- += Practice  -->
+    <script>
+        var c = [4, 56, 9, 10];
+        c.forEach(function (value) {
+            document.write(value += 10, "<br>");
+        })
+
+
+        function PrintPattern(value) {
+            for (i = 0; i < value; i++) {
+                document.write("*".repeat(i) + "<br>");
+            }
+        }
+        PrintPattern(5);
+
+        // FOR IN LOOP
+        // MOSTLY USE IN OBJECT 
+
+        var obj = {
+            firstname: "Sufyan",
+            Lastname: "Talib",
+            Age: 22,
+            City: "Mirpurkhas",
+        }
+
+        for (key in obj) {
+            document.write(key + ":" + " " + obj[key] + "<br>");
+        }
+
+        const numbers1 = [45, 4, 9, 16, 25];
+        numbers1.forEach(function (value) {
+            document.write(value + 2);
+        })
+        
+        document.write("<br>" + Date());
+    </script>
+</body>
+
+</html>
