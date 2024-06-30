@@ -27,8 +27,36 @@ else if(SomeDay = Today){
 else{
     text = "it is Before Today Date"
 }
-document.write(text)
+document.write(text);
 
 
 // MATH IN JAVASCRIPT
-document.write("Math in JavaScript");
+document.write("<br>" + "<b>" + "Math in JavaScript" + "</b>" + "<br>");
+
+document.write(Math.PI + "<br>");
+document.write(Math.E + "<br>");
+document.write(Math.SQRT2 + "<br>");
+document.write(Math.round(434.5) + "<br>");
+document.write(Math.ceil(4.3)+ "<br>");
+document.write(Math.floor(4.7)+ "<br>");
+document.write(Math.trunc(4.7)+ "<br>");
+document.write(Math.sign(-42)+ "<br>");
+document.write(Math.pow(5,2)+ "<br>");
+document.write(Math.sqrt(81)+ "<br>");
+document.write(Math.abs(-81)+ "<br>");
+document.write(Math.abs(-81)+ "<br>");
+document.write(Math.min(10 , 20 , 5 , -20 , 100 , -2)+ "<br>");
+document.write(Math.max(10 , 20 , 5 , -20 , 100 , -2)+ "<br>");
+document.write(Math.random()+ "<br>");
+document.write(Math.floor(Math.random() * 3) + 1);
+
+// function
+// random nmbr 
+// min 1
+// max 100
+// ok
+
+function Btn(){
+    let x = Math.floor(Math.random() * 100) + 1;
+    document.getElementById("para").innerHTML = x;
+}
