@@ -75,10 +75,10 @@
 //     age: 30,
 //     city: "New York"
 //   };
-  
+
 //   // Create an Array
 //   const myArray = JSON.stringify(person);
-  
+
 // document.write(myArray + "<br>");
 
 // var age = 20;
@@ -96,5 +96,111 @@
 // }
 
 // Logical Operators 
-let Logic = age(a<18 && a>=30) ? "you are eligle" : "you re too young";
-document.write("hello");
+function Vote(a, b) {
+    let Votes = (a >= 18 && b < 25) ? "You re eligle" : "you re too young";
+    document.write(Votes);
+}
+Vote(18, 50);
+
+// SWITCH Case
+
+switch (new Date().getDay()) {
+    default:
+        day = "Looke Forward"
+        break;
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case 6:
+        day = "Saturday";
+}
+
+document.getElementById('demo').innerHTML = day;
+
+
+let trafficLight = "green";
+ 
+switch (trafficLight) {
+    case "red":
+        message = "Stop immediately.";
+        break;
+    case "yellow":
+        message = "Prepare to stop.";
+        break;
+    case "green":
+        message = "Proceed or continue driving.";
+        break;
+    default:
+        message = "Invalid traffic light color.";
+}
+ 
+console.log(message)
+ 
+// Output: Proceed or continue driving.
+
+// CREATE CALCULATE USING SWITCH CASE 
+
+// let Number1 = Number(prompt("Enter Number 1"));
+// let Number2 = Number(prompt("Enter Number 2"));
+
+// let Operator = prompt("Enter the Operator");
+
+// switch (Operator) {
+//     case "+":
+//         console.log(Number1 + Number2);
+//         break;
+//     case "-":
+//         console.log(Number1 - Number2);
+//         break;
+//     case "*":
+//         console.log(Number1 * Number2);
+//         break;
+//     case "/":
+//         console.log(Number1 / Number2);
+//         break;
+//     default:
+//         console.log("Invalid Numbers");
+//         break;
+// }
+
+// if else Statement 
+
+let Marks = Number(prompt("Please Enter Your Marks"));
+let Grade = "Your Grade is ";
+
+if(Marks >= 90){
+    console.log(Grade + "A1");
+}
+else if(Marks >=80 && Marks < 90){
+    console.log(Grade + "A");
+}
+else if(Marks >= 60 && Marks <80){
+    console.log(Grade + "B");
+}
+else if(Marks >=50 && Marks <60){
+    console.log(Grade + "C");
+}
+else if(Marks >=40 && Marks <50){
+    console.log(Grade + "D");
+}
+else if(Marks <40){
+    console.log(Grade + "F");
+}
+else{
+    console.log("Please Enter Valid Number");
+}
